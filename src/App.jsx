@@ -43,8 +43,13 @@ function App() {
 
       {page === 'about' && (
         <div className="about-page">
-          <h1>About</h1>
-          <p>This is the About page</p>
+          <div className="about-content">
+            <p>Justin Joel Dewbre</p>
+            <p>3290 Bastrop Court</p>
+            <p>Rockwall, TX 75032</p>
+            <p>cell: 214.354.2747</p>
+            <p>email: joeld27@gmail.com</p>
+          </div>
         </div>
       )}
 
@@ -209,8 +214,13 @@ function App() {
 
       {page === 'contact' && (
         <div className="contact-page">
-          <h1>Contact</h1>
-          <p>Contact info will go here.</p>
+          <div className="about-content">
+            <p>Justin Joel Dewbre</p>
+            <p>3290 Bastrop Court</p>
+            <p>Rockwall, TX 75032</p>
+            <p>cell: 214.354.2747</p>
+            <p>email: joeld27@gmail.com</p>
+          </div>
         </div>
       )}
     </div>
