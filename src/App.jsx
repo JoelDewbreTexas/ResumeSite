@@ -179,11 +179,16 @@ function App() {
         <div className="about-page">
           <div className="about-content">
             <img className="about-photo" src={headshot} alt="Justin Joel Dewbre" width="269" height="274" />
-            <p>Justin Joel Dewbre</p>
-            <p>3290 Bastrop Court</p>
-            <p>Rockwall, TX 75032</p>
-            <p>cell: 214.354.2747</p>
-            <p>email: joeld27@gmail.com</p>
+            <div className="about-letter">
+              <p>To whom it may concern:</p>
+              <p>Please consider my qualifications for a postion.</p>
+              <p>I have several years of experience creating and implementing technical solutions with business clients including Service-Oriented Architecture (SOA) and Domain Driven Design. I have 5+ years' experience creating Microservices and APIs. I have 15+ years building OOP solutions.</p>
+              <p>I have worked in web design and development. Including HTML, CSS, Javascript, ASP.NET, VUE.js, Knockout.js, Web API, and C# web development, and enterprise architecture design. I also have similar years of experience with SQL Server. Writing queries, stored procedures, views and performing query optimization.</p>
+              <p>Several years of consulting with clients and getting along with coworkers has strengthened my interpersonal skills.</p>
+              <p>I am looking forward to discussing my qualifications with you. Thank you very much for your time and consideration.</p>
+              <p>Sincerely,</p>
+              <p>Justin Joel Dewbre</p>
+            </div>
           </div>
         </div>
       )}

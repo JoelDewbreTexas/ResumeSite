@@ -286,6 +286,18 @@
   margin-bottom: 0;
 }
 
+.about-letter {
+  text-align: left;
+}
+
+.about-letter p {
+  margin: 0 0 16px;
+}
+
+.about-letter p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 600px) {
   .about-content {
     padding: 24px 20px;
