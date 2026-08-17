@@ -1,6 +1,6 @@
 import './App.css'
 import { useState } from 'react'
-import resumePdf from './Artifacts/Joel_Dewbre_2026_08 - Concept.pdf'
+import headshot from './Artifacts/headshot.jpg'
 
 function App() {
   const [open, setOpen] = useState(false)
@@ -26,8 +26,6 @@ function App() {
       <nav className={`side-menu ${open ? 'open' : ''}`} aria-hidden={!open}>
         <ul>
           <li><button onClick={() => navigate('home')}>Home</button></li>
-          <li><button onClick={() => navigate('resume')}>Resume</button></li>
-          <li><button onClick={() => navigate('option2')}>Option 2</button></li>
           <li><button onClick={() => navigate('about')}>About</button></li>
           <li><button onClick={() => navigate('projects')}>Projects</button></li>
           <li><button onClick={() => navigate('contact')}>Contact</button></li>
@@ -35,34 +33,6 @@ function App() {
       </nav>
 
       {page === 'home' && (
-        <>
-          <h1>Hello, World!</h1>
-          <p>Welcome to Joel Dewbre's React site.</p>
-        </>
-      )}
-
-      {page === 'about' && (
-        <div className="about-page">
-          <div className="about-content">
-            <p>Justin Joel Dewbre</p>
-            <p>3290 Bastrop Court</p>
-            <p>Rockwall, TX 75032</p>
-            <p>cell: 214.354.2747</p>
-            <p>email: joeld27@gmail.com</p>
-          </div>
-        </div>
-      )}
-
-      {page === 'resume' && (
-        <div className="resume-page">
-          <h1>Resume</h1>
-          <div className="resume-embed">
-            <iframe src={resumePdf} title="Resume PDF" />
-          </div>
-        </div>
-      )}
-
-      {page === 'option2' && (
         <div className="option2-page">
           <div className="resume-html">
             <header className="resume-header">
@@ -97,7 +67,7 @@ function App() {
                 <li><strong>OS:</strong> Windows Server 2000/2012, Unix, Linux Ubuntu</li>
                 <li><strong>Development Environments:</strong> Visual Studio, Visual Studio Code</li>
                 <li><strong>Integrations:</strong> QuickBooks Online, Salesforce</li>
-                <li><strong>CI/CD:</strong> TFS, TeamCity, Octopus Deploy, NodeJS, npm, Git, Bitbucket, SVN</li>
+                <li><strong>CI/CD:</strong> TFS, TeamCity, Octopus Deploy, NodeJS, npm, Git, GitHub, Bitbucket, SVN</li>
                 <li><strong>Architecture:</strong> DDD, SOA, Distributed Messaging, Microservices, Web APIs, REST, MVC, Webform, MEF, client/server</li>
               </ul>
             </section>
@@ -205,10 +175,25 @@ function App() {
         </div>
       )}
 
+      {page === 'about' && (
+        <div className="about-page">
+          <div className="about-content">
+            <img className="about-photo" src={headshot} alt="Justin Joel Dewbre" width="269" height="274" />
+            <p>Justin Joel Dewbre</p>
+            <p>3290 Bastrop Court</p>
+            <p>Rockwall, TX 75032</p>
+            <p>cell: 214.354.2747</p>
+            <p>email: joeld27@gmail.com</p>
+          </div>
+        </div>
+      )}
+
       {page === 'projects' && (
         <div className="projects-page">
-          <h1>Projects</h1>
-          <p>Projects will go here.</p>
+          <div className="about-content">
+            <h1>Projects</h1>
+            <p><em>Coming Soon!</em></p>
+          </div>
         </div>
       )}
 

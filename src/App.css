@@ -99,12 +99,7 @@
 /* When menu is open, prevent body from scrolling (applied via class on container) */
 .menu-open { overflow: hidden; }
 
-/* Resume embed styling */
-.resume-page { padding: 24px; width: 100%; max-width: 960px; margin: 0 auto; }
-.resume-embed { margin-top: 12px; height: calc(100vh - 180px); }
-.resume-embed iframe { width: 100%; height: 100%; border: none; border-radius: 6px; }
-
-/* Option 2 - HTML resume styling */
+/* Home page - HTML resume styling */
 .option2-page {
   padding: 24px 16px 64px;
   width: 100%;
@@ -254,7 +249,8 @@
 
 /* About page - framed like the Option 2 resume card */
 .about-page,
-.contact-page {
+.contact-page,
+.projects-page {
   padding: 24px 16px 64px;
   width: 100%;
   max-width: 860px;
@@ -270,6 +266,16 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.5;
   text-align: center;
+}
+
+.about-photo {
+  display: block;
+  width: 269px;
+  height: 274px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto 20px;
 }
 
 .about-content p {
