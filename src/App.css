@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -53,6 +53,52 @@
 .hamburger-btn.open .line1 { transform: translateY(5px) rotate(45deg); }
 .hamburger-btn.open .line2 { opacity: 0; }
 .hamburger-btn.open .line3 { transform: translateY(-5px) rotate(-45deg); }
+
+/* Site banner (above the page content, shown on every page, pinned to top on scroll) */
+.site-banner {
+  position: sticky;
+  top: 0;
+  z-index: 45;
+  width: 100%;
+  padding: 24px 16px 0;
+  background: #B6D0E2;
+  text-align: center;
+}
+
+.site-banner h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #213547;
+}
+
+.site-banner .resume-subtitle {
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: #1c4b73;
+  font-size: 1.1rem;
+}
+
+.banner-contact-line {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.banner-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #1c4b73;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.banner-contact-item .contact-icon {
+  width: 16px;
+  height: 16px;
+}
 
 /* Side menu */
 .side-menu {
@@ -362,19 +408,6 @@
   text-align: left;
 }
 
-.contact-page .about-content h1 {
-  margin: 0 0 6px;
-  font-size: 2rem;
-  color: #213547;
-}
-
-.contact-page .resume-subtitle {
-  margin: 0 0 16px;
-  font-weight: 600;
-  color: #1c4b73;
-  font-size: 1.1rem;
-}
-
 .contact-page .resume-tagline {
   margin: 0 0 28px;
   color: #444;
@@ -401,7 +434,7 @@
 
 .resume-doc-nav {
   position: fixed;
-  top: 96px;
+  top: 140px;
   left: 16px;
   display: flex;
   flex-direction: column;

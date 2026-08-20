@@ -78,8 +78,6 @@ function ContactDetails() {
 function ResumeIntro() {
   return (
     <>
-      <h1>Justin Joel Dewbre</h1>
-      <p className="resume-subtitle">Team Lead Software Engineer - Full Stack</p>
       <p className="resume-tagline">Over three decades of web and cloud software solutions.<br />Well established in .NET, Azure, Vue.js and SQL.</p>
       <ContactDetails />
     </>
@@ -94,10 +92,11 @@ function App() {
   function navigate(to) {
     setPage(to)
     setOpen(false)
+    window.scrollTo(0, 0)
   }
 
   useEffect(() => {
-    if (page !== 'resume') return
+    if (page !== 'home') return
 
     const sections = ['prof-summary', 'skills', 'work-summary', 'education']
       .map((id) => document.getElementById(id))
@@ -131,6 +130,21 @@ function App() {
         <span className="line line3" />
       </button>
 
+      <div className="site-banner">
+        <h1>Justin Joel Dewbre</h1>
+        <p className="resume-subtitle">Team Lead Software Engineer - Full Stack</p>
+        <div className="banner-contact-line">
+          <span className="banner-contact-item">
+            <IconPhone className="contact-icon" />
+            214.354.2747
+          </span>
+          <span className="banner-contact-item">
+            <IconEmail className="contact-icon" />
+            joeld27@gmail.com
+          </span>
+        </div>
+      </div>
+
       <nav className={`side-menu ${open ? 'open' : ''}`} aria-hidden={!open}>
         <ul>
           <li><button onClick={() => navigate('home')}>Home</button></li>
@@ -141,7 +155,7 @@ function App() {
         </ul>
       </nav>
 
-      {page === 'home' && (
+      {page === 'resume' && (
         <div className="option2-page">
           <div className="resume-html">
             <header className="resume-header">
@@ -292,6 +306,7 @@ function App() {
               <p>I have several years of experience creating and implementing technical solutions with business clients including Service-Oriented Architecture (SOA) and Domain Driven Design. I have 5+ years' experience creating Microservices and APIs. I have 15+ years building OOP solutions.</p>
               <p>I have worked in web design and development. Including HTML, CSS, Javascript, ASP.NET, VUE.js, Knockout.js, Web API, and C# web development, and enterprise architecture design. I also have similar years of experience with SQL Server. Writing queries, stored procedures, views and performing query optimization.</p>
               <p>Several years of consulting with clients and getting along with coworkers has strengthened my interpersonal skills.</p>
+              <p><strong>Note:</strong> I am open to relocating within Texas or a surrounding state.</p>
               <p>I am looking forward to discussing my qualifications with you. Thank you very much for your time and consideration.</p>
               <p>Sincerely,</p>
               <p>Joel Dewbre</p>
@@ -300,7 +315,7 @@ function App() {
         </div>
       )}
 
-      {page === 'resume' && (
+      {page === 'home' && (
         <div className="resume-page">
           <div className="resume-doc-layout">
             <nav className="resume-doc-nav">
