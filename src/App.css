@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -27,6 +27,7 @@
   width: 44px;
   height: 44px;
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 8px;
@@ -52,6 +53,52 @@
 .hamburger-btn.open .line1 { transform: translateY(5px) rotate(45deg); }
 .hamburger-btn.open .line2 { opacity: 0; }
 .hamburger-btn.open .line3 { transform: translateY(-5px) rotate(-45deg); }
+
+/* Site banner (above the page content, shown on every page, pinned to top on scroll) */
+.site-banner {
+  position: sticky;
+  top: 0;
+  z-index: 45;
+  width: 100%;
+  padding: 24px 16px 0;
+  background: #B6D0E2;
+  text-align: center;
+}
+
+.site-banner h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #213547;
+}
+
+.site-banner .resume-subtitle {
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: #1c4b73;
+  font-size: 1.1rem;
+}
+
+.banner-contact-line {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.banner-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #1c4b73;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.banner-contact-item .contact-icon {
+  width: 16px;
+  height: 16px;
+}
 
 /* Side menu */
 .side-menu {
@@ -300,6 +347,265 @@
 
 @media (max-width: 600px) {
   .about-content {
+    padding: 24px 20px;
+  }
+}
+
+/* Contact details with entry icons */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.contact-row:last-child {
+  border-bottom: none;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  color: #1c4b73;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px auto 0;
+  width: fit-content;
+  padding: 12px 28px;
+  background: #1c4b73;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 150ms ease;
+}
+
+.download-btn:hover {
+  background: #163a5a;
+}
+
+.btn-icon {
+  flex-shrink: 0;
+}
+
+/* Contact page - left-justified form layout */
+.contact-page .about-content {
+  text-align: left;
+}
+
+.contact-page .resume-tagline {
+  margin: 0 0 28px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.contact-page .contact-details {
+  margin: 0;
+}
+
+/* Resume page - sectioned document with left text nav */
+.resume-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+.resume-doc-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.resume-doc-nav {
+  position: fixed;
+  top: 140px;
+  left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 180px;
+  z-index: 40;
+}
+
+.resume-doc-nav a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.resume-doc-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.resume-doc-nav a.active {
+  background-color: #96b9d2;
+  color: #0f2e46;
+}
+
+.nav-download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: #1c4b73;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.nav-download-btn:hover {
+  background: #163a5a;
+}
+
+.resume-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.resume-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.resume-action-btn.primary {
+  background: #1c4b73;
+  color: #fff;
+}
+
+.resume-action-btn.primary:hover {
+  background: #163a5a;
+}
+
+.resume-action-btn.secondary {
+  background: transparent;
+  color: #1c4b73;
+  border: 1px solid #1c4b73;
+}
+
+.resume-action-btn.secondary:hover {
+  background: rgba(28, 75, 115, 0.1);
+}
+
+.resume-doc-content {
+  flex: 1;
+  min-width: 0;
+  margin-left: 210px;
+  background: #fff;
+  color: #2b2b2b;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  padding: 40px 48px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.doc-section {
+  margin-bottom: 32px;
+}
+
+.doc-section:last-child {
+  margin-bottom: 0;
+}
+
+.doc-section h2 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #213547;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #213547;
+  margin-bottom: 18px;
+}
+
+.doc-section > p {
+  margin: 0 0 12px;
+}
+
+.doc-section > ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.doc-section > ul > li {
+  margin-bottom: 6px;
+}
+
+.skill-category {
+  margin-bottom: 18px;
+}
+
+.skill-category:last-child {
+  margin-bottom: 0;
+}
+
+.skill-category-label {
+  display: block;
+  font-weight: 600;
+  color: #1a2a38;
+  margin-bottom: 8px;
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-pill {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: #B6D0E2;
+  border: 1px solid #000;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+@media (max-width: 720px) {
+  .resume-doc-layout {
+    flex-direction: column;
+  }
+
+  .resume-doc-nav {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .resume-doc-content {
+    margin-left: 0;
     padding: 24px 20px;
   }
 }
