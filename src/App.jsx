@@ -213,14 +213,14 @@ function App() {
             <section className="resume-section">
               <h2>Technical Skills</h2>
               <ul className="skills-list">
-                <li><strong>Programming:</strong> C#.NET, VB.NET, TypeScript, JavaScript, HTML, CSS, Power Shell (20+ years)</li>
-                <li><strong>Backend:</strong> SQL Server, Stored Procedures, T-SQL, SSIS, Entity Framework, LINQ, Dapper, JQuery</li>
-                <li><strong>Middle Layer:</strong> .NET, ASP.NET, MVC, .NET Web API, NServiceBus, oAuth2, JWT</li>
-                <li><strong>Front End:</strong> JavaScript, Typescript, Vue.js, Knockout.js, Ajax, JSON, XML, Bootstrap, HTML/CSS</li>
+                <li><strong>Programming:</strong> C#.NET, VB.NET, TypeScript, JavaScript, HTML, CSS</li>
+                <li><strong>Backend:</strong> SQL Server, Stored Procedures, T-SQL, SSIS, Entity Framework, LINQ, Dapper, JQuery, nHibernate</li>
+                <li><strong>Middle Layer:</strong> .NET, ASP.NET, MVC, .NET Web API, NServiceBus, oAuth2, JWT, RabbitMQ</li>
+                <li><strong>Front End:</strong> JavaScript, Typescript, Vue.js (spa like React & Angular), Knockout.js, Ajax, JSON, XML, Bootstrap, HTML/CSS</li>
                 <li><strong>Cloud:</strong> Azure</li>
                 <li><strong>OS:</strong> Windows Server 2000/2012, Unix, Linux Ubuntu</li>
                 <li><strong>Development Environments:</strong> Visual Studio, Visual Studio Code</li>
-                <li><strong>Integrations:</strong> QuickBooks Online, Salesforce</li>
+                <li><strong>Integrations:</strong> QuickBooks Online & Desktop, Salesforce</li>
                 <li><strong>CI/CD:</strong> TFS, TeamCity, Octopus Deploy, NodeJS, npm, Git, GitHub, Bitbucket, SVN</li>
                 <li><strong>Architecture:</strong> DDD, SOA, Distributed Messaging, Microservices, Web APIs, REST, MVC, Webform, MEF, client/server</li>
               </ul>
@@ -296,13 +296,20 @@ function App() {
                   <p className="job-location">Richardson, TX</p>
                   <p className="job-title">IT Services – Senior Software Engineer</p>
                 </div>
+                <ul>
+                  <li>Built custom web sites for clients using the social media platform built by Telligent/Zimbra.</li>
+                </ul>
               </div>
 
               <div className="job job-compact">
                 <div className="job-header">
                   <h3>Born Information Services <span className="job-dates">March 1998 – April 2004</span></h3>
+                  <p className="job-location">Farmers Branch, TX</p>
                   <p className="job-title">IT Services – Consultant</p>
                 </div>
+                <ul>
+                  <li>Consultant on Microsoft tools and technologies.</li>
+                </ul>
               </div>
 
               <div className="job job-compact">
@@ -311,6 +318,9 @@ function App() {
                   <p className="job-location">Plano, TX</p>
                   <p className="job-title">Software Engineer</p>
                 </div>
+                <ul>
+                  <li>Software engineer on Unix systems using Microfocus COBOL.</li>
+                </ul>
               </div>
             </section>
 
@@ -322,6 +332,7 @@ function App() {
               </div>
               <div className="training-block">
                 <h3>Education</h3>
+                <p style={{ marginBottom: '12px' }}>Odessa College 1987-1990<br />General Studies</p>
                 <p>Graduate, Texas Tech University – 1992<br />Management Information Systems</p>
               </div>
             </section>
@@ -338,6 +349,7 @@ function App() {
               <p>I have worked in web design and development. Including HTML, CSS, Javascript, ASP.NET, VUE.js, Knockout.js, Web API, and C# web development, and enterprise architecture design. I also have similar years of experience with SQL Server. Writing queries, stored procedures, views and performing query optimization.</p>
               <p>Several years of consulting with clients and getting along with coworkers has strengthened my interpersonal skills.</p>
               <p><strong>Note:</strong> I am open to relocating within Texas or a surrounding state.</p>
+              <p>I would like to address the recent gap in my career. When I was workforce reduced from Service Autopilot I was given a severance package. I recently experienced a life change. So, I took some time off to be with my family as I and everyone adjusted. By the time I turned my attention back to my career, the job market in my industry had dried up and a larger number of people were competing for jobs. I have, a few times, been two or three interviews deep with a company, but there is just so much competition out here that I have not yet found the right fit in a company.</p>
               <p>I am looking forward to discussing my qualifications with you. Thank you very much for your time and consideration.</p>
               <p>Sincerely,</p>
               <p>Joel Dewbre</p>
