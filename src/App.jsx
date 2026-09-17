@@ -1,7 +1,8 @@
 import './App.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import headshot from './Artifacts/headshot.jpg'
 import resumePdf from './Artifacts/JoelDewbreResume.pdf'
+import siteLogo from './Artifacts/Lighthouse_Logo.png'
 
 function IconUser({ className }) {
   return (
@@ -38,6 +39,14 @@ function IconEmail({ className }) {
   )
 }
 
+function IconLinkedIn({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
+    </svg>
+  )
+}
+
 function IconDownload({ className }) {
   return (
     <svg className={className} viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -67,6 +76,10 @@ function ContactDetails() {
         <IconEmail className="contact-icon" />
         <span>joeld27@gmail.com</span>
       </div>
+      <div className="contact-row">
+        <IconLinkedIn className="contact-icon" />
+        <a href="https://www.linkedin.com/in/justin-dewbre-41a535/" target="_blank" rel="noopener noreferrer">My LinkedIn</a>
+      </div>
       <a className="download-btn" href={resumePdf} download="Joel_Dewbre_Resume.pdf">
         <IconDownload className="btn-icon" />
         Download PDF
@@ -88,6 +101,8 @@ function App() {
   const [open, setOpen] = useState(false)
   const [page, setPage] = useState('home')
   const [activeSection, setActiveSection] = useState('prof-summary')
+  const [navTop, setNavTop] = useState(180)
+  const docLayoutRef = useRef(null)
 
   function navigate(to) {
     setPage(to)
@@ -118,8 +133,24 @@ function App() {
     return () => observer.disconnect()
   }, [page])
 
+  useEffect(() => {
+    if (page !== 'home') return
+
+    function updateNavTop() {
+      const el = docLayoutRef.current
+      if (!el) return
+      setNavTop(el.getBoundingClientRect().top + window.scrollY)
+    }
+
+    updateNavTop()
+    window.addEventListener('resize', updateNavTop)
+    return () => window.removeEventListener('resize', updateNavTop)
+  }, [page])
+
   return (
     <div className={`hello-container ${open ? 'menu-open' : ''}`}>
+      {!open && <img className="site-logo" src={siteLogo} alt="Site logo" />}
+
       <button
         className={`hamburger-btn ${open ? 'open' : ''}`}
         aria-label={open ? 'Close menu' : 'Open menu'}
@@ -317,8 +348,8 @@ function App() {
 
       {page === 'home' && (
         <div className="resume-page">
-          <div className="resume-doc-layout">
-            <nav className="resume-doc-nav">
+          <div className="resume-doc-layout" ref={docLayoutRef}>
+            <nav className="resume-doc-nav" style={{ top: navTop }}>
               <a href="#prof-summary" className={activeSection === 'prof-summary' ? 'active' : ''}>Professional Summary</a>
               <a href="#skills" className={activeSection === 'skills' ? 'active' : ''}>Skills</a>
               <a href="#work-summary" className={activeSection === 'work-summary' ? 'active' : ''}>Work Summary</a>
@@ -349,15 +380,15 @@ function App() {
                 <h2>Skills</h2>
                 {[
                   { label: 'Programming', items: ['C#.NET', 'VB.NET', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Power Shell'] },
-                  { label: 'Backend', items: ['SQL Server', 'Stored Procedures', 'T-SQL', 'SSIS', 'Entity Framework', 'LINQ', 'Dapper', 'JQuery'] },
-                  { label: 'Middle Layer', items: ['.NET', 'ASP.NET', 'MVC', '.NET Web API', 'NServiceBus', 'oAuth2', 'JWT'] },
+                  { label: 'Backend', items: ['SQL Server', 'Stored Procedures', 'T-SQL', 'SSIS', 'Entity Framework', 'LINQ', 'Dapper', 'JQuery', 'nHibernate'] },
+                  { label: 'Middle Layer', items: ['.NET', 'ASP.NET', 'MVC', '.NET Web API', 'NServiceBus', 'oAuth2', 'JWT', 'RabbitMQ'] },
                   { label: 'Front End', items: ['JavaScript', 'Typescript', 'Vue.js', 'Knockout.js', 'Ajax', 'JSON', 'XML', 'Bootstrap', 'HTML/CSS'] },
                   { label: 'Cloud', items: ['Azure'] },
                   { label: 'OS', items: ['Windows Server 2000/2012', 'Unix', 'Linux Ubuntu'] },
                   { label: 'Development Environments', items: ['Visual Studio', 'Visual Studio Code'] },
-                  { label: 'Integrations', items: ['QuickBooks Online', 'Salesforce'] },
+                  { label: 'Integrations', items: ['QuickBooks Online', 'QuickBooks Desktop', 'Salesforce'] },
                   { label: 'CI/CD', items: ['TFS', 'TeamCity', 'Octopus Deploy', 'NodeJS', 'npm', 'Git', 'GitHub', 'Bitbucket', 'SVN'] },
-                  { label: 'Architecture', items: ['DDD', 'SOA', 'Distributed Messaging', 'Microservices', 'Web APIs', 'REST', 'MVC', 'Webform', 'MEF', 'client/server'] },
+                  { label: 'Architecture', items: ['DDD', 'SOA', 'Distributed Messaging', 'Microservices', 'Web APIs', 'REST', 'MVC', 'MVVM', 'Webform', 'MEF', 'client/server'] },
                 ].map((group) => (
                   <div className="skill-category" key={group.label}>
                     <span className="skill-category-label">{group.label}</span>
@@ -445,8 +476,12 @@ function App() {
                 <div className="job job-compact">
                   <div className="job-header">
                     <h3>Born Information Services <span className="job-dates">March 1998 – April 2004</span></h3>
+                    <p className="job-location">Farmers Branch, TX</p>
                     <p className="job-title">IT Services – Consultant</p>
                   </div>
+                  <ul>
+                    <li>Consultant on Microsoft tools and technologies.</li>
+                  </ul>
                 </div>
 
                 <div className="job job-compact">
@@ -455,6 +490,9 @@ function App() {
                     <p className="job-location">Plano, TX</p>
                     <p className="job-title">Software Engineer</p>
                   </div>
+                  <ul>
+                    <li>Software engineer on Unix systems using Microfocus COBOL.</li>
+                  </ul>
                 </div>
               </section>
 
