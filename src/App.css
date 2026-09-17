@@ -19,11 +19,22 @@
   color: #555;
 }
 
-/* Hamburger button (top-left) */
+/* Site logo (top-left) */
+.site-logo {
+  position: fixed;
+  top: -4px;
+  left: 16px;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  z-index: 60;
+}
+
+/* Hamburger button (top-right) */
 .hamburger-btn {
   position: fixed;
   top: 16px;
-  left: 16px;
+  right: 16px;
   width: 44px;
   height: 44px;
   display: inline-flex;
@@ -370,6 +381,15 @@
   border-bottom: 1px solid #ececec;
 }
 
+.contact-row a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-row a:hover {
+  text-decoration: underline;
+}
+
 .contact-row:last-child {
   border-bottom: none;
 }
@@ -434,7 +454,6 @@
 
 .resume-doc-nav {
   position: fixed;
-  top: 140px;
   left: 16px;
   display: flex;
   flex-direction: column;
@@ -519,7 +538,7 @@
 .resume-doc-content {
   flex: 1;
   min-width: 0;
-  margin-left: 210px;
+  margin-left: 212px;
   background: #fff;
   color: #2b2b2b;
   border-radius: 10px;
@@ -592,20 +611,19 @@
   color: #2b2b2b;
 }
 
-@media (max-width: 720px) {
-  .resume-doc-layout {
-    flex-direction: column;
+@media (max-width: 600px) {
+  .resume-doc-nav {
+    min-width: 130px;
+    gap: 8px;
   }
 
-  .resume-doc-nav {
-    position: static;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 16px;
+  .resume-doc-nav a {
+    padding: 6px 8px;
+    font-size: 0.85rem;
   }
 
   .resume-doc-content {
-    margin-left: 0;
+    margin-left: 158px;
     padding: 24px 20px;
   }
 }
