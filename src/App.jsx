@@ -66,7 +66,7 @@ function ContactDetails() {
       </div>
       <div className="contact-row">
         <IconLocation className="contact-icon" />
-        <span>Rockwall, TX</span>
+        <span>Seminole, TX</span>
       </div>
       <div className="contact-row">
         <IconPhone className="contact-icon" />
@@ -192,7 +192,7 @@ function App() {
             <header className="resume-header">
               <h1>Joel Dewbre</h1>
               <p className="contact-line">
-                Joeld27@gmail.com &nbsp;|&nbsp; (214) 354-2747 &nbsp;|&nbsp; 3290 Bastrop Court, Rockwall, Texas, 75032
+                Joeld27@gmail.com &nbsp;|&nbsp; (214) 354-2747 &nbsp;|&nbsp; 1301 Hobbs Highway, Seminole, Texas, 79360
               </p>
             </header>
 
@@ -221,13 +221,39 @@ function App() {
                 <li><strong>OS:</strong> Windows Server 2000/2012, Unix, Linux Ubuntu</li>
                 <li><strong>Development Environments:</strong> Visual Studio, Visual Studio Code</li>
                 <li><strong>Integrations:</strong> QuickBooks Online & Desktop, Salesforce</li>
-                <li><strong>CI/CD:</strong> TFS, TeamCity, Octopus Deploy, NodeJS, npm, Git, GitHub, Bitbucket, SVN</li>
-                <li><strong>Architecture:</strong> DDD, SOA, Distributed Messaging, Microservices, Web APIs, REST, MVC, Webform, MEF, client/server</li>
+                <li><strong>CI/CD:</strong> TFS, TeamCity, Octopus Deploy, npm, Git, GitHub, Bitbucket, SVN</li>
+                <li><strong>Architecture:</strong> Domain Driven Design, Service Oriented Architecture, Object Oriented Programming, SOLID, Distributed Messaging, Microservices, Web APIs, RESTful, MVC, MVVM, Webform, MEF, client/server</li>
+                <li><strong>AI:</strong> ChatGPT, Claude Code, VS &amp; VS Code CoPilot</li>
               </ul>
             </section>
 
             <section className="resume-section">
               <h2>Professional Experience</h2>
+
+              <div className="job">
+                <div className="job-header">
+                  <h3>Seminole, TX ISD <span className="job-dates">September 2026 – Current</span></h3>
+                  <p className="job-location">Seminole, TX</p>
+                  <p className="job-title">Substitute Teacher</p>
+                </div>
+                <ul>
+                  <li>Elementary through High School substitute teaching.</li>
+                </ul>
+              </div>
+
+              <div className="job">
+                <div className="job-header">
+                  <h3>JoelD Consulting <span className="job-dates">June 2026 – Current</span></h3>
+                  <p className="job-location">Seminole, TX</p>
+                  <p className="job-title">Consultant</p>
+                </div>
+                <ul>
+                  <li>Client: TowTrax. Application and architecture review for investment. Provided recommendations and various reports for long-term technical strategies.</li>
+                  <li>Client: Bloinka. Consulting on architecture and application development. Also consulted on and used Claude AI.</li>
+                  <li>Client: PracticalHCR. Worked with client to design and develop an e-commerce marketing website. Leveraged Claude AI in research and development.</li>
+                  <li>Client: Antler Properties. Designed and developed an Azure inventory tracking application for insurance and appraisal purposes. Leveraged Claude AI in research and development.</li>
+                </ul>
+              </div>
 
               <div className="job">
                 <div className="job-header">
@@ -270,9 +296,6 @@ function App() {
                 <ul>
                   <li>Managed the relationship between the business and the development team, analyzing business problems then architecting, developing, and implementing solutions.</li>
                   <li>Responsible for providing technical direction to my team, handing out assignments using Agile, supervising tasks, and mentoring team members.</li>
-                  <li>Developed while leading a team of six developers.</li>
-                  <li>Led the team to perform maintenance and enhancements on a new CRM web application. My team built external interfaces and peripheral applications for the new CRM.</li>
-                  <li>The external interfaces include batch processing jobs and a web service for adding, changing and cancelling memberships. Batch job leverages MEF and Inheritance to quickly accommodate customer data variances.</li>
                   <li>Built an MVC3 website using SOLID, IoC, ASP.NET, C# and Telerik's KendoUI for tow truck companies to complete their own invoices.</li>
                 </ul>
               </div>
@@ -284,9 +307,7 @@ function App() {
                   <p className="job-title">IT Services – Managing Consultant</p>
                 </div>
                 <ul>
-                  <li>Fostered client relationships, requirements gathering, and problem solving through architecting, developing, and implementing cross-browser custom web applications.</li>
                   <li>Developed custom solutions for clients using ASP.NET, JavaScript, jQuery and C# to build web solutions.</li>
-                  <li>Data access solutions varied from SQL Server stored procedures to RESTful data services.</li>
                 </ul>
               </div>
 
@@ -331,9 +352,9 @@ function App() {
                 <p>Microsoft Certified Application Developer (expired)</p>
               </div>
               <div className="training-block">
-                <h3>Education</h3>
-                <p style={{ marginBottom: '12px' }}>Odessa College 1987-1990<br />General Studies</p>
-                <p>Graduate, Texas Tech University – 1992<br />Management Information Systems</p>
+                <h3>College</h3>
+                <p style={{ marginBottom: '12px' }}>Odessa College 1987-1990<br />Basics</p>
+                <p>Graduate, Texas Tech University 1990-1992<br />Management Information Systems</p>
               </div>
             </section>
           </div>
@@ -391,7 +412,7 @@ function App() {
               <section id="skills" className="doc-section">
                 <h2>Skills</h2>
                 {[
-                  { label: 'Programming', items: ['C#.NET', 'VB.NET', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Power Shell'] },
+                  { label: 'Programming', items: ['C#.NET', 'VB.NET', 'TypeScript', 'JavaScript', 'HTML', 'CSS'] },
                   { label: 'Backend', items: ['SQL Server', 'Stored Procedures', 'T-SQL', 'SSIS', 'Entity Framework', 'LINQ', 'Dapper', 'JQuery', 'nHibernate'] },
                   { label: 'Middle Layer', items: ['.NET', 'ASP.NET', 'MVC', '.NET Web API', 'NServiceBus', 'oAuth2', 'JWT', 'RabbitMQ'] },
                   { label: 'Front End', items: ['JavaScript', 'Typescript', 'Vue.js', 'Knockout.js', 'Ajax', 'JSON', 'XML', 'Bootstrap', 'HTML/CSS'] },
@@ -399,8 +420,9 @@ function App() {
                   { label: 'OS', items: ['Windows Server 2000/2012', 'Unix', 'Linux Ubuntu'] },
                   { label: 'Development Environments', items: ['Visual Studio', 'Visual Studio Code'] },
                   { label: 'Integrations', items: ['QuickBooks Online', 'QuickBooks Desktop', 'Salesforce'] },
-                  { label: 'CI/CD', items: ['TFS', 'TeamCity', 'Octopus Deploy', 'NodeJS', 'npm', 'Git', 'GitHub', 'Bitbucket', 'SVN'] },
-                  { label: 'Architecture', items: ['DDD', 'SOA', 'Distributed Messaging', 'Microservices', 'Web APIs', 'REST', 'MVC', 'MVVM', 'Webform', 'MEF', 'client/server'] },
+                  { label: 'CI/CD', items: ['TFS', 'TeamCity', 'Octopus Deploy', 'npm', 'Git', 'GitHub', 'Bitbucket', 'SVN'] },
+                  { label: 'Architecture', items: ['Domain Driven Design', 'Service Oriented Architecture', 'Object Oriented Programming', 'SOLID', 'Distributed Messaging', 'Microservices', 'Web APIs', 'RESTful', 'MVC', 'MVVM', 'Webform', 'MEF', 'client/server'] },
+                  { label: 'AI', items: ['ChatGPT', 'Claude Code', 'VS & VS Code CoPilot'] },
                 ].map((group) => (
                   <div className="skill-category" key={group.label}>
                     <span className="skill-category-label">{group.label}</span>
@@ -415,6 +437,31 @@ function App() {
 
               <section id="work-summary" className="doc-section">
                 <h2>Work Summary</h2>
+
+                <div className="job">
+                  <div className="job-header">
+                    <h3>Seminole, TX ISD <span className="job-dates">September 2026 – Current</span></h3>
+                    <p className="job-location">Seminole, TX</p>
+                    <p className="job-title">Substitute Teacher</p>
+                  </div>
+                  <ul>
+                    <li>Elementary through High School substitute teaching.</li>
+                  </ul>
+                </div>
+
+                <div className="job">
+                  <div className="job-header">
+                    <h3>JoelD Consulting <span className="job-dates">June 2026 – Current</span></h3>
+                    <p className="job-location">Seminole, TX</p>
+                    <p className="job-title">Consultant</p>
+                  </div>
+                  <ul>
+                    <li>Client: TowTrax. Application and architecture review for investment. Provided recommendations and various reports for long-term technical strategies.</li>
+                    <li>Client: Bloinka. Consulting on architecture and application development. Also consulted on and used Claude AI.</li>
+                    <li>Client: PracticalHCR. Worked with client to design and develop an e-commerce marketing website. Leveraged Claude AI in research and development.</li>
+                    <li>Client: Antler Properties. Designed and developed an Azure inventory tracking application for insurance and appraisal purposes. Leveraged Claude AI in research and development.</li>
+                  </ul>
+                </div>
 
                 <div className="job">
                   <div className="job-header">
@@ -457,9 +504,6 @@ function App() {
                   <ul>
                     <li>Managed the relationship between the business and the development team, analyzing business problems then architecting, developing, and implementing solutions.</li>
                     <li>Responsible for providing technical direction to my team, handing out assignments using Agile, supervising tasks, and mentoring team members.</li>
-                    <li>Developed while leading a team of six developers.</li>
-                    <li>Led the team to perform maintenance and enhancements on a new CRM web application. My team built external interfaces and peripheral applications for the new CRM.</li>
-                    <li>The external interfaces include batch processing jobs and a web service for adding, changing and cancelling memberships. Batch job leverages MEF and Inheritance to quickly accommodate customer data variances.</li>
                     <li>Built an MVC3 website using SOLID, IoC, ASP.NET, C# and Telerik's KendoUI for tow truck companies to complete their own invoices.</li>
                   </ul>
                 </div>
@@ -471,9 +515,7 @@ function App() {
                     <p className="job-title">IT Services – Managing Consultant</p>
                   </div>
                   <ul>
-                    <li>Fostered client relationships, requirements gathering, and problem solving through architecting, developing, and implementing cross-browser custom web applications.</li>
                     <li>Developed custom solutions for clients using ASP.NET, JavaScript, jQuery and C# to build web solutions.</li>
-                    <li>Data access solutions varied from SQL Server stored procedures to RESTful data services.</li>
                   </ul>
                 </div>
 
@@ -515,8 +557,9 @@ function App() {
                   <p>Microsoft Certified Application Developer (expired)</p>
                 </div>
                 <div className="training-block">
-                  <h3>Education</h3>
-                  <p>Graduate, Texas Tech University – 1992<br />Management Information Systems</p>
+                  <h3>College</h3>
+                  <p style={{ marginBottom: '12px' }}>Odessa College 1987-1990<br />Basics</p>
+                  <p>Graduate, Texas Tech University 1990-1992<br />Management Information Systems</p>
                 </div>
               </section>
             </div>
